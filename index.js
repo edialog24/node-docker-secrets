@@ -3,7 +3,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const SECRETS_DIR = '/run/secrets';
+const SECRETS_DIR = process.env.SECRETS_DIR || '/run/secrets';
 const output = {};
 
 const files = fs.readdirSync(SECRETS_DIR);
